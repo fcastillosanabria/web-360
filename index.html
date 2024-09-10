@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualización 360</title>
+    <!-- Incluimos Pannellum desde CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css">
+    <script src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+    <style>
+        /* Establecemos el tamaño del contenedor */
+        #panorama {
+            width: 100%;
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Habitacion de un programador</h1>
+
+    <!-- Contenedor donde se mostrará la imagen 360 -->
+    <div id="panorama"></div>
+
+    <script>
+        // Inicializamos Pannellum con la imagen 360
+        pannellum.viewer('panorama', {
+            "type": "equirectangular", // Especifica que la imagen es 360 grados
+            "panorama": "https://res.cloudinary.com/di9h6cniw/image/upload/v1725933783/prueba_aha9ol.png", // Cambia por la ruta de tu imagen
+            "autoLoad": true // Carga automáticamente la imagen al cargar la página
+        });
+    </script>
+
+</body>
+</html>
